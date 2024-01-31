@@ -7,12 +7,13 @@ document.getElementById("addNumber").addEventListener("click", () => {
   document.getElementById("numberListHtml").innerHTML = numberList.join(', ')
   });
 
-  document.getElementById("selectMinimum").addEventListener("click", () => {
-    let minimum = 9999999999
+  document.getElementById("selectMaximum").addEventListener("click", () => {
+   
+    let maximum = -9999999999
     numberList.forEach(element => {
-        if (element<minimum) {
-          minimum = element
+        if (element>maximum) {
+          maximum = element
         }
     });
-    document.getElementById("numberListHtml").innerHTML = minimum;
+    document.getElementById("numberListHtml").innerHTML = maximum;
   })
